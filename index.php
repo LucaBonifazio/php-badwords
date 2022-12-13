@@ -12,8 +12,8 @@
     $text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit?';
     $nText = strlen($text);
     var_dump(strlen($text));
-    $censored = $_GET['censored'];
-    $textCensored = str_ireplace ($censored, '***', $text);
+    $censoredWord = $_GET['censored'];
+    $textCensored = str_ireplace ($censoredWord, '***', $text);
     ?>
     <h1><?= $title ?></h1>
     <p><?= $text?> <span style="color: blue">Word number(<?= $nText ?>)</span></p>
