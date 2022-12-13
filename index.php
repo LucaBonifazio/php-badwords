@@ -7,6 +7,21 @@
     <title>PHP Badwords</title>
 </head>
 <body>
-    
+    <?php
+    $title = 'First project of PHP';
+    $text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit?';
+    $nText = strlen($text);
+    var_dump(strlen($text));
+    $censored = $_GET['censored'];
+    $textCensored = str_ireplace ($censored, '***', $text);
+    ?>
+    <h1><?= $title ?></h1>
+    <p><?= $text?> <span style="color: blue">Word number(<?= $nText ?>)</span></p>
+    <form action="" method="get">
+        <label for="censored" style="color: red">Words banned</label>
+		<input type="text" id="censored" name="censored">
+        <button>Censored</button>
+    </form>
+    <p><?= $textCensored ?></p>
 </body>
 </html>
