@@ -15,12 +15,14 @@
     $textCensored = str_ireplace ($censoredWord, '***', $text);
     ?>
     <h1><?= $title ?></h1>
+    <h2>Paragrafo originale</h2>
     <p><?= $text?> <span style="color: blue">Word count(<?= strlen($text) ?>)</span></p>
     <form action="" method="get">
         <label for="censored" style="color: red">Word banned</label>
 		<input type="text" id="censored" name="censored">
         <button>Censored</button>
     </form>
+    <h2>Paragrafo censurato</h2>
     <p><?= $textCensored ?><span style="color: blue">Word count(<?= strlen($textCensored) ?>)</span></p>
 </body>
 </html>
