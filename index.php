@@ -12,17 +12,18 @@
     $text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus aut numquam porro nesciunt! Facere sint itaque repellendus fugiat consequatur porro animi nisi, laborum magnam est, blanditiis dolorem maiores velit?';
     // var_dump(strlen($text));
     $censoredWord = $_GET['censored'];
-    $textCensored = str_ireplace ($censoredWord, '***', $text);
+    $textCensored = str_ireplace ($censoredWord, '***', $text, $substitution);
     ?>
     <h1><?= $title ?></h1>
-    <h2>Paragrafo originale</h2>
+    <h2>Originl text</h2>
     <p><?= $text?> <span style="color: blue">Word count(<?= strlen($text) ?>)</span></p>
     <form action="" method="get">
         <label for="censored" style="color: red">Word banned</label>
 		<input type="text" id="censored" name="censored">
         <button>Censored</button>
     </form>
-    <h2>Paragrafo censurato</h2>
+    <h2>Censored text</h2>
     <p><?= $textCensored ?><span style="color: blue">Word count(<?= strlen($textCensored) ?>)</span></p>
+    <h3>Censored count word: <?= $substitution ?></h3>
 </body>
 </html>
