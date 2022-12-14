@@ -19,7 +19,7 @@
     <h1><?= $title ?></h1>
     <p><?= $text?> <span style="color: blue">Word number(<?= $nText ?>)</span></p>
     <form action="" method="get">
-        <label for="censored" style="color: red">Words banned</label>
+        <label for="censored" style="color: red">Word banned</label>
 		<input type="text" id="censored" name="censored">
         <button>Censored</button>
     </form>
